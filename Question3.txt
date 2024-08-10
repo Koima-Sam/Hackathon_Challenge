@@ -1,0 +1,12 @@
+#RETREIVE USERS ADDED WITHIN LAST 30 days
+
+Select * FROM Users WHERE CreatedDate >= NOW() - INTERVAL 30 DAY;
+
+#TOTAL NUMBER OF USERS endinng WITH SPECIFIC DOMAIN IN THEIR EMAIL 
+
+Select COUNT(*) AS totalusers FROM Users WHERE email LIKE '%@example.com';
+
+
+#UPDATE EMAIL OF A USER WITH A SPECIFIC ID
+
+UPDATE Users SET Email = 'user@gmail.com' WHERE UserId = ID;
